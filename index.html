@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vehicle Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand__dot"></span>
+          <div>
+            <p class="brand__title">Vehicle Settings</p>
+            <p class="brand__subtitle">Google Automotive UI</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav__item nav__item--active" data-section="vehicle">Vehicle</button>
+          <button class="nav__item" data-section="driving">Driving & Assist</button>
+          <button class="nav__item" data-section="climate">Climate</button>
+          <button class="nav__item" data-section="safety">Safety</button>
+          <button class="nav__item" data-section="apps">Apps & Accounts</button>
+        </nav>
+        <div class="driver-card">
+          <p class="driver-card__label">Active profile</p>
+          <p class="driver-card__name">Driver: Jordan Lee</p>
+          <p class="driver-card__meta">Battery 82% · Range 246 mi</p>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="content__header">
+          <div>
+            <h1 id="section-title">Vehicle</h1>
+            <p class="content__subtitle">Customize how your car feels and responds.</p>
+          </div>
+          <div class="search">
+            <input type="search" placeholder="Search settings" aria-label="Search settings" />
+            <span class="search__hint">⌘ K</span>
+          </div>
+        </header>
+
+        <section class="cards" id="cards"></section>
+      </main>
+    </div>
+
+    <template id="card-template">
+      <article class="card">
+        <div class="card__header">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="card__body"></div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
